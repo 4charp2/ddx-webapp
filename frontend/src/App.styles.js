@@ -27,8 +27,8 @@ a:visited {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;  
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;  
 }
 
 input,
@@ -42,6 +42,9 @@ button {
   border: none;
   outline: none;
 }
+ button {
+   cursor: pointer;
+ }
 
 ul li {
   list-style: none;
