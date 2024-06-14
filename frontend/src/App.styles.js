@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('/fonts/montserrat/Montserrat-Regular.ttf');
+    src: url('/fonts/montserrat/Montserrat-SemiBold.ttf');
     font-style: normal;
 }
  
@@ -99,7 +99,6 @@ export const Container = styled.div`
 // `
 
 export const Title = styled.p`
-  font-family: 'Montserrat';
   font-size: 24px;
   font-weight: 700;
   line-height: 22px;
@@ -107,13 +106,7 @@ export const Title = styled.p`
 `
 
 export const Heading = styled.p`
-  font-family: 'Montserrat';
   font-size: 12px;
   font-weight: 600;
   line-height: 22px;
-  color: #ffffff;
-
-  &:hover {
-    color: #202439;
-  }
 `
