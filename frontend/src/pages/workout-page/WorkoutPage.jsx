@@ -1,5 +1,4 @@
 // import { useParams } from 'react-router-dom'
-import { useState } from 'react'
 import { Navigation } from '../../components/navigation/Navigation'
 import * as S from './WorkoutPage.styles'
 import { Card } from '../../components/card/Card'
@@ -7,19 +6,6 @@ import { Card } from '../../components/card/Card'
 export const WorkoutPage = () => {
   // const { id } = useParams()
   const buttonNavWorkout = ['Неделя 1', 'Неделя 2', 'Неделя 3', 'Неделя 4']
-
-  // const workoutCards = [
-  //   { day: 'День 1', workout: 'Пулл', status: 'check' },
-  //   { day: 'День 2', workout: 'Пуш', status: 'select' },
-  //   { day: 'День 3', workout: 'Ноги', status: 'lock' },
-  // ]
-
-  // const [isStatusCard, setIsStatusCard] = useState('select')
-
-  // const filterClickHandler = (id) => {
-  //   setIsStatusCard(isStatusCard === id ? null : id)
-  // }
-
   const exercises = [
     {
       id: 8,
@@ -46,7 +32,7 @@ export const WorkoutPage = () => {
       complexity: ['true', 'true', 'true', 'false', 'false'],
     },
   ]
-  
+
   return (
     <S.Workout>
       <S.Course>
@@ -55,7 +41,10 @@ export const WorkoutPage = () => {
         <S.CartButton src="/img/cart-button.svg" />
       </S.Course>
       <S.WorkoutTitle>Базовый курс</S.WorkoutTitle>
-      <Navigation buttonNav={buttonNavWorkout}  typeWorkout={true} />
+      <Navigation
+        buttonNav={buttonNavWorkout}
+        typeWorkout={true}
+      />
       <S.WorkoutBlock>
         <S.BlockCardDone>
           <S.CardTop>
@@ -81,48 +70,26 @@ export const WorkoutPage = () => {
         </S.BlockCardLock>
       </S.WorkoutBlock>
       <S.CardWorkout>
-      <Card
-        title='Разминка'
-        heading='Делай его перед каждой тренировкой'
-        complexity={[true, false, false, false]}
-        typeWorkout={true}
-      />
+        <Card
+          title="Разминка"
+          heading="Делай его перед каждой тренировкой"
+          complexity={[true, false, false, false]}
+          typeWorkout={true}
+        />
       </S.CardWorkout>
       <S.CardExercise>
-      {exercises.map((exerciseCard) => (
-                <Card
-                  key={exerciseCard.id}
-                  title={exerciseCard.title}
-                  heading={exerciseCard.heading}
-                  complexity={exerciseCard.complexity}
-                  id={exerciseCard.id}
-                  typeExercise={true}
-                ></Card>
-              ))}
+        {exercises.map((exerciseCard) => (
+          <Card
+            key={exerciseCard.id}
+            title={exerciseCard.title}
+            heading={exerciseCard.heading}
+            complexity={exerciseCard.complexity}
+            id={exerciseCard.id}
+            typeExercise={true}
+          ></Card>
+        ))}
       </S.CardExercise>
 
-      {/* {workoutCards.map((workoutCard, index) => (
-          <S.BlockCard
-            $background={isStatusCard === workoutCard.status}
-            key={index}
-            onClick={() => {
-              return filterClickHandler(workoutCard.status)
-            }}
-  
-          >
-            <S.CardTop>
-              <S.CardTitle>{workoutCard.day}</S.CardTitle>
-              {workoutCard.status === 'check' ? (
-                <S.CardTopSvg src="/img/check.svg" />
-              ) : workoutCard.status === 'lock' ? (
-                <S.CardTopSvg src="/img/lock.svg" />
-              ) : (
-                ''
-              )}
-            </S.CardTop>
-            <S.CardTitle>{workoutCard.workout}</S.CardTitle>
-          </S.BlockCard>
-        ))} */}
     </S.Workout>
   )
 }

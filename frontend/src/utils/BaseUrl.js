@@ -1,0 +1,1 @@
+export const baseUrl = 'https://ddx-backend.plutus-fin.ru/api/'

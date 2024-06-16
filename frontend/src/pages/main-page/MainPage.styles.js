@@ -65,3 +65,52 @@ export const CardsBlock = styled.ul`
   flex-direction: column;
   gap: 10px;
 `
+export const BlockBottom = styled.div`
+margin-top: 25px;
+`
+export const BottomHeading = styled(Title)`
+font-size: 18px;
+text-align: center;
+margin-bottom: 25px;
+
+`
+export const BottomCard = styled.div`  width: 358px;
+  height: 150px;
+  position: relative;
+`
+
+export const CardImg = styled.img`
+  width: 358px;
+  height: 150px;
+  border-radius: 16px;
+`
+export const CardTitle = styled(Title)`
+  color: #ffffff;
+`
+
+export const CardHeading = styled(Heading)`
+  color: #ffffff;
+`
+
+export const CardContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+`
+
+export const ContentLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`
+
+
+export const ContentArrow = styled.img`
+  width: 29.42px;
+  height: 29.42px;
+  top: 15.58px;
+`
