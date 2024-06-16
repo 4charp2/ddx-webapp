@@ -4,8 +4,21 @@ import swaggerUi from 'swagger-ui-express';
 import { sequelize } from './DB/initsequlize.mjs';
 import './DB/sinc.mjs';
 
+//socketio
+import http from 'http';
+import { Server } from 'socket.io';
+import { configureSocket } from './sockets/socket.mjs';
+
+
 const app = express();
 const port = 3010;
+
+
+const server = http.createServer(app);
+
+// Настройка Socket.IO
+const io = new Server(server);
+configureSocket(io);
 
 
 //Swagger
@@ -69,7 +82,7 @@ app.use('/api/training', TraningGETRoute)
 
 
 if (process.env.NODE_ENV !== 'test') {
-    app.listen(port, () => {
+    server.listen(port, () => {
         console.log(`Server is running on http://localhost:${port}`);
     });
 }
