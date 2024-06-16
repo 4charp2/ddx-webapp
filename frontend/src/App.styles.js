@@ -27,8 +27,6 @@ a:visited {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;  
 }
 
 input,
@@ -65,38 +63,6 @@ export const Container = styled.div`
 `
 
 // Переиспользуемые компоненты
-
-// export const ButtonBlue = styled.button`
-//   color: #2c3531;
-//   border: 2px #afeeee solid;
-//   background-color: #afeeee;
-//   font-size: 16px;
-//   align-self: center;
-//   justify-self: flex-end;
-//   cursor: pointer;
-
-//   transition: all 0.3s ease-out;
-//   padding: 10px 15px;
-//   border-radius: 2px;
-//   font-weight: bold;
-
-//   &:hover {
-//     background-color: #437c7e;
-//     border: 2px #437c7e solid;
-//   }
-// `
-
-// export const ButtonWithBorder = styled(ButtonBlue)`
-//   width: 145px;
-//   height: 45px;
-//   color: #afeeee;
-//   background-color: #2c3531;
-
-//   &:hover {
-//     color: #437c7e;
-//     background-color: #2c3531;
-//   }
-// `
 
 export const Title = styled.p`
   font-size: 24px;

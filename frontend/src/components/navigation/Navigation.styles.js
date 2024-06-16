@@ -22,5 +22,7 @@ export const NavElement = styled.li`
   &:hover {
     color: #ed6929;
     border-color: #ed6929;
+    ${({ $typeWorkout }) =>
+      $typeWorkout && 'color: #1BA3C4; border-color: #1BA3C4'}
   }
 `

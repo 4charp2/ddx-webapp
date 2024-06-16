@@ -38,7 +38,6 @@ export const BlockCardLock = styled.li`
   padding: 15px;
   border-radius: 8px;
   border: 1px solid #20243940;
-
 `
 
 export const CardTop = styled.div`
@@ -62,4 +61,10 @@ export const BlockCardActive = styled(BlockCardDone)`
 `
 export const CardTitleWhite = styled(CardTitle)`
   color: #ffffff;
+`
+export const CardExercise = styled.ul`
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `

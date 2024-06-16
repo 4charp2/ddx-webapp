@@ -1,14 +1,20 @@
-// import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import * as S from './Navigation.styles'
 
-export const Navigation = ({ buttonNav }) => {
+export const Navigation = ({ buttonNav, setCurrentCourse, typeWorkout }) => {
+  const navigate = useNavigate()
+
   return (
     <S.NavBlock>
       <S.NavOrder>
-        {buttonNav.map((button, index) => (
-          // <Link to={`/course/${id}`}>
-          <S.NavElement key={index}>{button}</S.NavElement>
-          // </Link>
+        {buttonNav?.map((button) => (
+          <S.NavElement
+            key={button.id}
+            onClick={() => setCurrentCourse(button.tag_category)}
+            $typeWorkout={typeWorkout}
+          >
+            {button.name}
+          </S.NavElement>
         ))}
       </S.NavOrder>
     </S.NavBlock>
