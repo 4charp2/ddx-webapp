@@ -11,3 +11,5 @@
 {"chatId":514328131,"error":{"code":"ETELEGRAM","message":"ETELEGRAM: 400 Bad Request: invalid file HTTP URL specified: Host is invalid"},"level":"error","message":"Error in startMessage module: ETELEGRAM: 400 Bad Request: invalid file HTTP URL specified: Host is invalid","service":"user-service","timestamp":"2024-06-16 20:14:56"}
 {"level":"info","message":"Команда /start","service":"user-service","timestamp":"2024-06-16 20:15:52"}
 {"level":"info","message":"Команда /start","service":"user-service","timestamp":"2024-06-16 20:16:17"}
+{"level":"info","message":"Команда /start","service":"user-service","timestamp":"2024-06-16 20:22:41"}
+{"level":"info","message":"Команда /start","service":"user-service","timestamp":"2024-06-16 20:52:54"}

@@ -2,6 +2,7 @@ import express from 'express';
 import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import { sequelize } from './DB/initsequlize.mjs';
+import cors from 'cors';
 import './DB/sinc.mjs';
 
 //socketio
@@ -39,7 +40,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use(express.json());
 
-
+app.use(cors());
 
 //telegram
 import {bot} from './bot/bot.mjs'
