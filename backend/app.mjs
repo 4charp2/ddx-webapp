@@ -1,10 +1,11 @@
 import express from 'express';
 import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-
+import { sequelize } from './DB/initsequlize.mjs';
+import './DB/sinc.mjs';
 
 const app = express();
-const port = 3006;
+const port = 3010;
 
 
 //Swagger
@@ -35,10 +36,25 @@ app.use(apiRoutes);
 
 //users
 
+import usersADDRoute from './routes/users/add.mjs';
+app.use('/api/users', usersADDRoute)
+
+
+import usersGetRoute from './routes/users/get.mjs';
+app.use('/api/users', usersGetRoute)
+
+
+import categoryADDRoute from './routes/category/add.mjs'
+app.use('/api/category', categoryADDRoute)
+
+
+import categoryGETRoute from './routes/category/get.mjs'
+app.use('/api/category', categoryGETRoute)
 
 
 
-
+import ProgramADDRoute from './routes/programs/add.mjs'
+app.use('/api/programs', ProgramADDRoute)
 
 
 

@@ -16,5 +16,11 @@ export const swaggerOptions = {
             ]
         }
     },
-    apis: ['./routes/*.mjs']
+    apis: [
+        './routes/*.mjs',
+        './routes/users/*.mjs',
+        './routes/category/*.mjs',
+        './routes/programs/*.mjs',
+        './routes/traning/*.mjs'
+    ],
 };
