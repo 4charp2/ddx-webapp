@@ -103,7 +103,7 @@ export const MainPage = () => {
                   heading={courseCard.heading}
                   complexity={courseCard.complexity}
                   id={courseCard.id}
-                  // typeMain={true}
+                  typeCourse={true}
                 ></Card>
               ))}
             </S.CardsBlock>

@@ -20,6 +20,33 @@ export const WorkoutPage = () => {
   //   setIsStatusCard(isStatusCard === id ? null : id)
   // }
 
+  const exercises = [
+    {
+      id: 8,
+      title: 'Старт',
+      heading: 'День 1 | Фитнесс-тест',
+      complexity: ['true', 'false', 'false', 'false', 'false'],
+    },
+    {
+      id: 9,
+      title: 'Сезон 1',
+      heading: 'День 1-30',
+      complexity: ['true', 'true', 'false', 'false', 'false'],
+    },
+    {
+      id: 10,
+      title: 'Сезон 2',
+      heading: 'День 30-60',
+      complexity: ['true', 'true', 'true', 'true', 'false'],
+    },
+    {
+      id: 11,
+      title: 'Жиросжигание ',
+      heading: 'День 1-30',
+      complexity: ['true', 'true', 'true', 'false', 'false'],
+    },
+  ]
+  
   return (
     <S.Workout>
       <S.Course>
@@ -28,7 +55,7 @@ export const WorkoutPage = () => {
         <S.CartButton src="/img/cart-button.svg" />
       </S.Course>
       <S.WorkoutTitle>Базовый курс</S.WorkoutTitle>
-      <Navigation buttonNav={buttonNavWorkout} />
+      <Navigation buttonNav={buttonNavWorkout}  typeWorkout={true} />
       <S.WorkoutBlock>
         <S.BlockCardDone>
           <S.CardTop>
@@ -61,6 +88,18 @@ export const WorkoutPage = () => {
         typeWorkout={true}
       />
       </S.CardWorkout>
+      <S.CardExercise>
+      {exercises.map((exerciseCard) => (
+                <Card
+                  key={exerciseCard.id}
+                  title={exerciseCard.title}
+                  heading={exerciseCard.heading}
+                  complexity={exerciseCard.complexity}
+                  id={exerciseCard.id}
+                  typeExercise={true}
+                ></Card>
+              ))}
+      </S.CardExercise>
 
       {/* {workoutCards.map((workoutCard, index) => (
           <S.BlockCard

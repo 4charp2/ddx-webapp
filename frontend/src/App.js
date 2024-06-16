@@ -18,7 +18,6 @@ function App() {
       <GlobalStyles />
       <Wrapper>
         <Container>
-          {/* <Header /> */}
           <AppRoutes>
             <MainPage />
           </AppRoutes>

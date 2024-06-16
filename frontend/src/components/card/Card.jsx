@@ -1,9 +1,11 @@
 import * as S from './Card.styles'
 
-export const Card = ({ title, heading, complexity, id, typeWorkout }) => {
+export const Card = ({ title, heading, complexity, id, typeCourse, typeWorkout, typeExercise }) => {
   return (
     <S.CardCourse $typeWorkout={typeWorkout}>
-     {!typeWorkout && <S.CardImg  src={`/img/${id}.png`}></S.CardImg>} 
+     {typeCourse && <S.CardImg  src={`/img/${id}.png`}></S.CardImg>} 
+     {typeExercise && <S.CardImg  src={`/img/${id}.png`}></S.CardImg>} 
+
 
       <S.CardTop>
         <S.CardHeading $typeWorkout={typeWorkout}>Cложность:</S.CardHeading>
