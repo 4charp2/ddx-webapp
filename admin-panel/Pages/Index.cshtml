@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center desktop">
+    <h1 class="display-4">Административная панель</h1>
+    <div class="row">
+        <div class="col">
+            <a href="category/" class="link-default">
+                <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Категории</div>
+                    <div class="card-body">
+                    <p class="card-text">Редактирование и удаление</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="product/" class="link-default">
+                <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Курсы</div>
+                    <div class="card-body">
+                    <p class="card-text">Редактирование и удаление</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
