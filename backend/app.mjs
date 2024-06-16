@@ -56,6 +56,16 @@ app.use('/api/category', categoryGETRoute)
 import ProgramADDRoute from './routes/programs/add.mjs'
 app.use('/api/programs', ProgramADDRoute)
 
+import ProgramGetRoute from './routes/programs/get.mjs'
+app.use('/api/programs', ProgramGetRoute)
+
+import TraningAddRoute from './routes/traning/add.mjs'
+app.use('/api/training', TraningAddRoute)
+
+
+import TraningGETRoute from './routes/traning/get.mjs'
+app.use('/api/training', TraningGETRoute)
+
 
 
 if (process.env.NODE_ENV !== 'test') {
