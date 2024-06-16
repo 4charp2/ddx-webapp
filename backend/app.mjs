@@ -2,12 +2,15 @@ import express from 'express';
 import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import { sequelize } from './DB/initsequlize.mjs';
+
 import './DB/sinc.mjs';
 
 const app = express();
 const port = 3010;
 
-
+import cors from 'cors'
+app.use(cors());
+  
 //Swagger
 import { swaggerOptions } from './options/swaggerOptions.mjs';
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
