@@ -11,7 +11,7 @@ import { configureSocket } from './sockets/socket.mjs';
 
 
 const app = express();
-const port = 3010;
+const port = 3011;
 
 
 const server = http.createServer(app);
@@ -40,10 +40,15 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use(express.json());
 
 
+
+//telegram
+import {bot} from './bot/bot.mjs'
+bot.expressApp = app;
+import './bot/func/commands.mjs'
+
 //api
 import apiRoutes from './routes/api.mjs';
 app.use(apiRoutes);
-
 
 
 
