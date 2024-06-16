@@ -8,3 +8,4 @@ username=postgres
 password=
 dialect=postgres
 host=localhost
+TOKEN=Токен бота
