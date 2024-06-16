@@ -5,6 +5,10 @@ export const CardCourse = styled.li`
   width: 358px;
   height: 150px;
   position: relative;
+
+  ${({ $typeWorkout }) =>
+    $typeWorkout &&
+    'background: linear-gradient(180deg, rgba(26, 163, 196, 0.1) 0%, rgba(25, 157, 189, 0.1) 100%);   border-radius: 16px;'}
 `
 
 export const CardImg = styled.img`
@@ -24,6 +28,8 @@ export const CardTop = styled.div`
 
 export const CardHeading = styled(Heading)`
   color: #ffffff;
+
+  ${({ $typeWorkout }) => $typeWorkout && 'color: #1BA3C4;'}
 `
 
 export const TopBlock = styled.div`
@@ -34,6 +40,8 @@ export const TopBlock = styled.div`
 export const TopComplexity = styled.img`
   width: 9px;
   height: 12px;
+
+  ${({ $complexity }) => $complexity && 'fill: #ffffff;opacity: 1;'}
 `
 
 export const CardContent = styled.div`
@@ -54,6 +62,8 @@ export const ContentLeft = styled.div`
 
 export const CardTitle = styled(Title)`
   color: #ffffff;
+
+  ${({ $typeWorkout }) => $typeWorkout && 'color: #1BA3C4;'}
 `
 
 export const ContentArrow = styled.img`

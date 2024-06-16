@@ -2,12 +2,10 @@ import { useNavigate } from 'react-router-dom'
 import * as S from './MainPage.styles'
 import { Navigation } from '../../components/navigation/Navigation'
 import { Card } from '../../components/card/Card'
+// import { useState } from 'react'
 
 const buttonNavMain = [
-  { id: 1, name: 'CHALLENGE' },
-  { id: 2, name: 'ДОМ' },
-  { id: 3, name: 'ГАНТЕЛИ' },
-  { id: 4, name: 'ЗАЛ' },
+  'CHALLENGE', 'ДОМ', 'ГАНТЕЛИ', 'ЗАЛ'
 ]
 
 const workouts = [
